@@ -1,0 +1,28 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Ensures the background covers the full height */
+    background-size: cover; /* Ensures the background image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    padding: 20px; /* Adds some padding for better spacing */
+    box-sizing: border-box; /* Ensures padding is included in element's total width and height */
+    background-image: url("../src/assets/BackForm.jpeg");
+    width: 100%;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  }
+  
+  .content {
+    flex: 1; /* Makes the content area take up remaining space between the header and footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  

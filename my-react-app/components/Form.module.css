@@ -1,0 +1,88 @@
+
+.wrapper {
+  width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.274);
+  border: 1px solid #cccccc82;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+h3 {
+  text-align: left;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputWrapper {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.inputWrapperRow {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.inputItem {
+  flex: 1;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccce5;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+}
+
+legend {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 20px;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+}
+
+.radioGroup input {
+  margin-right: 5px;
+}

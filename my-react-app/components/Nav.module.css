@@ -1,0 +1,18 @@
+.Nav {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  background-color: beige;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBarContentWrapper {
+    max-width: 1080px;
+    width: 100%;
+    display: grid;
+}
