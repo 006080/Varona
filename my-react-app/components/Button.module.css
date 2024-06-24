@@ -1,0 +1,32 @@
+.button {
+  padding: 10px 40px;
+  background-color: #2e496b;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  
+    &:hover {
+      background-color: #171717;
+    }
+  
+    &:focus {
+      outline: none !important;
+    }
+  }
+  
+  .selected {
+    background-color: #f03636;
+  
+    &:hover {
+      background-color: #d90909;
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+  }

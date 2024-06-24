@@ -31,9 +31,6 @@ const Form = () => {
 
       <br></br>
 
-      <p style={{ color: "white", fontWeight: "700", fontSize: "44px" }}>
-        Contact Us:
-      </p>
 
       <div className={styles.wrapper}>
         <form className={styles.form} onSubmit={handleSubmit}>

@@ -1,0 +1,105 @@
+.fashionItem {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  margin: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.fashionItem img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.fashionItem h3 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.incriment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 120px;
+  background-color: #f2f2f2;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.incr {
+  color: black;
+  padding: 0 10px;
+  font-size: 18px;
+  user-select: none;
+}
+
+.quanty {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.starPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.description {
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.notes {
+  text-align: left;
+}
+
+.imageControl {
+  max-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .fashionItem {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .info {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fashionItem {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .info {
+    width: 85%;
+  }
+}

@@ -1,48 +1,38 @@
-import Nav from "./Nav";
-import logo from "../src/assets/Logo.webp";
-import Cart from "./Cart";
-import User from "../src/assets/User";
-import styles from "../components/FashionView.module.css";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import Header from "./Header";
+import CartSummary from "./CartSummary";
+import Shop from "./Shop";
+import styles from "./FashionView.module.css";
 
 const FashionView = () => {
-  const navigate = useNavigate();
+  const [cartItems, setCartItems] = useState([]);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
+
+  const addToCart = (product) => {
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.name === product.name);
+      if (existingItem) {
+        return prevItems.map((item) =>
+          item.name === product.name
+            ? { ...item, quantity: item.quantity + product.quantity }
+            : item
+        );
+      } else {
+        return [...prevItems, product];
+      }
+    });
+  };
+
   return (
-    <>
-    <Nav className={Nav}>
-      <div className={styles.navigation}>
-        <div>
-          <img onClick= {()=>navigate("/")} src={logo} alt="Shopping Cart" width={130} />
-        </div>
+    <div className={styles.container}>
+      <Header setCartIsOpen={setCartIsOpen} />
 
-        <div className={styles.navbar}>
-          <ul>
-            <li>
-              <p onClick={() => navigate("/ourstory")}>Our Story</p>
-            </li>
-            <li>
-              <p onClick={() => navigate("/ourservice")}>Our Service</p>
-            </li>
-            <li>
-              <p onClick={() => navigate("/blog")}>Blog</p>
-            </li>
-            <li>
-              <p onClick={() => navigate("/shop")}>Shop</p>
-            </li>
-            <li>
-              <p onClick={() => navigate("/contacts")}>Contacts</p>
-            </li>
-          </ul>
-        </div>
+      {cartIsOpen && <CartSummary cartItems={cartItems} onClose={() => setCartIsOpen(false)} />}
 
-        <div className={styles.icons}>
-          <Cart></Cart>
-          <User></User>
-        </div>
+      <div className={styles.content}>
+        <Shop addToCart={addToCart} />
       </div>
-    </Nav>
-
-    </>
+    </div>
   );
 };
 

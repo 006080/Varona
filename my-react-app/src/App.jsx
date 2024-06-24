@@ -1,42 +1,47 @@
-import Contacts from "../components/Contacts"
-import OurStory from "../components/OurStory"
-import OurService from "../components/OurService"
-import FashionView from "../components/FashionView";
+// App.jsx
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "../components/Header";
+import Home from "../components/Home";
+import OurStory from "../components/OurStory";
+import OurService from "../components/OurService";
 import Blog from "../components/Blog";
+import Contacts from "../components/Contacts";
 import Shop from "../components/Shop";
-import "./App.css";
-import backgroundImage from "../src/assets/BackForm.jpeg";
 import Footer from "../components/Footer";
 
-  import {
-    BrowserRouter as Router,
-    Route, Routes
-  } from "react-router-dom";
+const App = () => {
+  const [cartItems, setCartItems] = React.useState([]);
 
-  function App() {
-    return (
-      <>
+  const addToCart = (product) => {
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.name === product.name);
+      if (existingItem) {
+        return prevItems.map((item) =>
+          item.name === product.name
+            ? { ...item, quantity: item.quantity + product.quantity }
+            : item
+        );
+      } else {
+        return [...prevItems, product];
+      }
+    });
+  };
 
-          {/* <Router> */}
-            <div className="app-container">
-          <FashionView></FashionView>   
+  return (
+    <Router>
+      <Header />
       <Routes>
-        <Route index element={<FashionView  />} />
-     
-        <Route path="*" element={<p>404 Page not found</p>} />
-        <Route path="/ourservice" element={<OurService />} />
+        <Route path="/" element={<Home />} />
         <Route path="/ourstory" element={<OurStory />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/contacts" element={<Contacts  backgroundImage={backgroundImage}/>}/>
-        <Route path="/blog" element={<Blog />}/>
+        <Route path="/ourservice" element={<OurService />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/shop" element={<Shop/>} />
       </Routes>
-    
       <Footer></Footer>
-      </div>
-    {/* </Router> */}
+    </Router>
+  );
+};
 
-      </>
-    );
-  }
-
-  export default App;
+export default App;

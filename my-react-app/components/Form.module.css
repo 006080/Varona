@@ -1,8 +1,8 @@
 
 .wrapper {
-  width: 600px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.274);
+  width: 500px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.181);
   border: 1px solid #cccccc82;
   border-radius: 10px;
   justify-content: center;
@@ -19,7 +19,7 @@ h3 {
 }
 
 .inputWrapper {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 100%;
 }
 
@@ -38,6 +38,7 @@ h3 {
 }
 
 label {
+  color: white;
   display: block;
   margin-bottom: 5px;
   text-align: left;
@@ -56,7 +57,7 @@ textarea {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px 40px;
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -85,4 +86,12 @@ legend {
 
 .radioGroup input {
   margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
 }

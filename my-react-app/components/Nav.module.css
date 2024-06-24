@@ -1,7 +1,6 @@
-.Nav {
-  padding: 5px;
+.nav {
   width: 100%;
-  display: flex;
+  display: inline-block;
   flex-direction: row;
   position: fixed;
   background-color: beige;
@@ -9,10 +8,25 @@
   left: 0;
   align-items: center;
   justify-content: center;
+  z-index: 2000;
 }
 
 .navBarContentWrapper {
-    max-width: 1080px;
-    width: 100%;
-    display: grid;
+  width: 100%;
+  max-width: 100%; /* Full width on mobile */
+  /* display: flex; */
+  flex-direction: column; /* Stack items vertically on mobile */
+  align-items: center;
+  justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 3px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}
+

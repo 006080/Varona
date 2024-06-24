@@ -1,0 +1,139 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.logotype {
+  width: 120px;
+}
+
+.burgerIcon {
+  display: none;
+}
+
+.navbar {
+  text-align: center;
+  margin-left:280px ;
+  margin-right:280px ;
+}
+
+.navLinks {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLinks li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.navLinks li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon,
+.cartIcon,
+.burgerIcon {
+  font-size: 24px;
+  margin-left: 15px; /* Adjust margin to space icons appropriately */
+}
+
+.cartIcon {
+  cursor: pointer;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .burgerIcon {
+    display: block;
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    top: 50px; /* Adjust based on your header height */
+    right: 10px;
+    background-color: beige;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 2000; /* Ensure dropdown is above other content */
+  }
+
+  .navbar {
+    text-align: center;
+    margin-left:40px ;
+    margin-right:40px ;
+  }
+
+  .dropdownLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .dropdownLinks li {
+    margin: 10px 0;
+  }
+
+  .dropdownLinks li:hover {
+    margin: 10px 0;
+    text-decoration: underline;
+    cursor: pointer;
+   
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navLinks {
+    display: none;
+  }
+
+  .burgerIcon {
+    display: block;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 50px; /* Adjust based on your header height */
+    right: 10px;
+    background-color: beige;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 2000; /* Ensure dropdown is above other content */
+  }
+
+  .dropdownLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdownLinks li {
+    margin: 10px 0;
+  }
+
+  .dropdownLinks li:hover {
+    margin: 10px 0;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
