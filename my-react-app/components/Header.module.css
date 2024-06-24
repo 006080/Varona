@@ -1,13 +1,14 @@
 .navigation {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 5px;
+  padding: 10px;
 }
 
-.logotype {
+/* .logotype {
   width: 120px;
-}
+  margin-left: 10px; /* Add margin on the left */
+  /* margin-right: 10px; Add margin on the right */
 
 .burgerIcon {
   display: none;
@@ -15,20 +16,24 @@
 
 .navbar {
   text-align: center;
-  margin-left:280px ;
-  margin-right:280px ;
+  margin-left: 280px;
+  margin-right: 280px;
 }
 
 .navLinks {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  white-space: nowrap; /* Prevent links from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
 }
 
 .navLinks li {
   display: inline-block;
   margin-right: 20px;
   margin-left: 20px;
+  white-space: nowrap; /* Prevent links from wrapping */
 }
 
 .navLinks li:hover {
@@ -58,10 +63,17 @@
     display: none;
   }
 
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
   .burgerIcon {
     display: block;
   }
-  
+
   .dropdownMenu {
     position: absolute;
     top: 50px; /* Adjust based on your header height */
@@ -75,8 +87,8 @@
 
   .navbar {
     text-align: center;
-    margin-left:40px ;
-    margin-right:40px ;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .dropdownLinks {
@@ -85,25 +97,27 @@
     margin: 0;
   }
 
-  .navLinks {
-    display: none;
-  }
-
   .dropdownLinks li {
     margin: 10px 0;
+    white-space: nowrap; /* Prevent links from wrapping */
   }
 
   .dropdownLinks li:hover {
-    margin: 10px 0;
     text-decoration: underline;
     cursor: pointer;
-   
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .navLinks {
     display: none;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
   }
 
   .burgerIcon {
@@ -129,10 +143,10 @@
 
   .dropdownLinks li {
     margin: 10px 0;
+    white-space: nowrap; /* Prevent links from wrapping */
   }
 
   .dropdownLinks li:hover {
-    margin: 10px 0;
     text-decoration: underline;
     cursor: pointer;
   }
