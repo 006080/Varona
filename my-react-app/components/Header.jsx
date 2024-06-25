@@ -8,11 +8,13 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import CartSummary from "./CartSummary";
+import { useCart } from "./CartContext";
 
 const Header = () => {
   const navigate = useNavigate();
   const [cartIsOpen, setCartIsOpen] = useState(false);
   const [menu, openMenu] = useState(false);
+  const { cartItems } = useCart();
 
   const handleCartClick = () => {
     setCartIsOpen(!cartIsOpen);
@@ -20,8 +22,8 @@ const Header = () => {
 
   const toggleMenu = () => {
     openMenu(!menu);
-      }
-    
+  };
+
   return (
     <Nav>
       <div className={styles.navigation}>
@@ -38,13 +40,13 @@ const Header = () => {
           </ul>
         </div>
         <div className={styles.icons}>
-          <div >
-          <FontAwesomeIcon onClick={handleCartClick} className={styles.cartIcon} icon={faCartShopping} />
-
-            {cartIsOpen && <CartSummary onClose={() => setCartIsOpen(false)} />}
+          <div>
+            <FontAwesomeIcon onClick={handleCartClick} className={styles.cartIcon} icon={faCartShopping} />
+            {cartItems.length > 0 && <span className={styles.cartCount}>{cartItems.reduce((total, item) => total + item.quantity, 0)}</span>}
+            {cartIsOpen && <CartSummary cartItems={cartItems} onClose={() => setCartIsOpen(false)} />}
           </div>
-          <FontAwesomeIcon icon={faUser} className= {styles.userIcon} />
-          <FontAwesomeIcon className={styles.burgerIcon} onClick={toggleMenu} icon={faBars}/>
+          <FontAwesomeIcon icon={faUser} className={styles.userIcon} />
+          <FontAwesomeIcon className={styles.burgerIcon} onClick={toggleMenu} icon={faBars} />
         </div>
         {menu && (
           <div className={styles.dropdownMenu}>

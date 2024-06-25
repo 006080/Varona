@@ -4,16 +4,18 @@ import Button from "./Button";
 import styles from "./CardProduct.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useCart } from './CartContext';
 
-const CardProduct = ({ name, image, onClick, price, description }) => {
+const CardProduct = ({ name, image, price, description }) => {
   const [count, setCount] = useState(0);
+  const { addToCart } = useCart();
 
   const increment = () => setCount(count + 1);
   const decrement = () => count > 0 && setCount(count - 1);
 
   const itemAdd = () => {
     const product = { name, price, quantity: count };
-    onClick(product);
+    addToCart(product);
   };
 
   const [selectedStars, setSelectedStars] = useState(0);
@@ -62,7 +64,6 @@ const CardProduct = ({ name, image, onClick, price, description }) => {
 CardProduct.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
   price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
 };

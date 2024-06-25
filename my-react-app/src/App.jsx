@@ -9,26 +9,28 @@ import Blog from "../components/Blog";
 import Contacts from "../components/Contacts";
 import Shop from "../components/Shop";
 import Footer from "../components/Footer";
+import { CartProvider } from '../components/CartContext';
 
 const App = () => {
   const [cartItems, setCartItems] = React.useState([]);
 
-  const addToCart = (product) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find((item) => item.name === product.name);
-      if (existingItem) {
-        return prevItems.map((item) =>
-          item.name === product.name
-            ? { ...item, quantity: item.quantity + product.quantity }
-            : item
-        );
-      } else {
-        return [...prevItems, product];
-      }
-    });
-  };
+  // const addToCart = (product) => {
+  //   setCartItems((prevItems) => {
+  //     const existingItem = prevItems.find((item) => item.name === product.name);
+  //     if (existingItem) {
+  //       return prevItems.map((item) =>
+  //         item.name === product.name
+  //           ? { ...item, quantity: item.quantity + product.quantity }
+  //           : item
+  //       );
+  //     } else {
+  //       return [...prevItems, product];
+  //     }
+  //   });
+  // };
 
   return (
+    <CartProvider>
     <Router>
       <Header />
       <Routes>
@@ -41,6 +43,7 @@ const App = () => {
       </Routes>
       <Footer></Footer>
     </Router>
+    </CartProvider>
   );
 };
 

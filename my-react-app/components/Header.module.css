@@ -1,14 +1,20 @@
 .navigation {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   padding: 10px;
 }
 
-/* .logotype {
-  width: 120px;
-  margin-left: 10px; /* Add margin on the left */
-  /* margin-right: 10px; Add margin on the right */
+.cartCount {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: rgb(47, 249, 84);
+  color: white;
+  border-radius: 50%;
+  padding: 5px 9px;
+  font-size: 10px;
+  font-weight: bold;
+}
 
 .burgerIcon {
   display: none;
@@ -24,16 +30,16 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  white-space: nowrap; /* Prevent links from wrapping */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navLinks li {
   display: inline-block;
   margin-right: 20px;
   margin-left: 20px;
-  white-space: nowrap; /* Prevent links from wrapping */
+  white-space: nowrap;
 }
 
 .navLinks li:hover {
@@ -44,17 +50,24 @@
 .icons {
   display: flex;
   align-items: center;
+  position: relative; /* Added to position the cart count correctly */
 }
 
 .userIcon,
 .cartIcon,
 .burgerIcon {
   font-size: 24px;
-  margin-left: 15px; /* Adjust margin to space icons appropriately */
+  margin-left: 15px;
 }
 
 .cartIcon {
   cursor: pointer;
+  position: relative; /* Added to position the cart count correctly */
+}
+
+.logotype {
+  width: 100px;
+  margin-left: 70px;
 }
 
 /* Media query for responsive design */
@@ -76,13 +89,13 @@
 
   .dropdownMenu {
     position: absolute;
-    top: 50px; /* Adjust based on your header height */
+    top: 50px;
     right: 10px;
     background-color: beige;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 10px;
-    z-index: 2000; /* Ensure dropdown is above other content */
+    z-index: 2000;
   }
 
   .navbar {
@@ -99,7 +112,7 @@
 
   .dropdownLinks li {
     margin: 10px 0;
-    white-space: nowrap; /* Prevent links from wrapping */
+    white-space: nowrap;
   }
 
   .dropdownLinks li:hover {
@@ -126,13 +139,13 @@
 
   .dropdownMenu {
     position: absolute;
-    top: 50px; /* Adjust based on your header height */
+    top: 50px;
     right: 10px;
     background-color: beige;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 10px;
-    z-index: 2000; /* Ensure dropdown is above other content */
+    z-index: 2000;
   }
 
   .dropdownLinks {
@@ -143,7 +156,7 @@
 
   .dropdownLinks li {
     margin: 10px 0;
-    white-space: nowrap; /* Prevent links from wrapping */
+    white-space: nowrap;
   }
 
   .dropdownLinks li:hover {
