@@ -1,0 +1,41 @@
+.cartSummary {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 250px;
+  z-index: 1000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeIcon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+}
+
+.cartSummary h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.cartSummary p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}

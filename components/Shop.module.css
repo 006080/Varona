@@ -1,0 +1,6 @@
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    margin-top: 80px;
+}

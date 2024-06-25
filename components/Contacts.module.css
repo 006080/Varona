@@ -1,0 +1,27 @@
+.background {
+  width: 100%;
+  height: 100vh; /* Ensure the background covers the full height of the viewport */
+  background-image: url("../src/assets/Black.jpeg");
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  box-sizing: border-box; /* Ensure padding is included in element's total width and height */
+  left: 0;
+  right: 0;
+  top: 0; /* Ensure the background covers from the top */
+  bottom: 0; /* Ensure the background covers to the bottom */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+@media (max-width: 768px) {
+  /* Optional: Add any responsive styles for smaller screens here */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Optional: Add any responsive styles for tablet screens here */
+}

@@ -1,0 +1,166 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.cartCount {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: rgb(47, 249, 84);
+  color: white;
+  border-radius: 50%;
+  padding: 5px 9px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.burgerIcon {
+  display: none;
+}
+
+.navbar {
+  text-align: center;
+  margin-left: 280px;
+  margin-right: 280px;
+}
+
+.navLinks {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navLinks li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+.navLinks li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  position: relative; /* Added to position the cart count correctly */
+}
+
+.userIcon,
+.cartIcon,
+.burgerIcon {
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.cartIcon {
+  cursor: pointer;
+  position: relative; /* Added to position the cart count correctly */
+}
+
+.logotype {
+  width: 100px;
+  margin-left: 70px;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .burgerIcon {
+    display: block;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: beige;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 2000;
+  }
+
+  .navbar {
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .dropdownLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdownLinks li {
+    margin: 10px 0;
+    white-space: nowrap;
+  }
+
+  .dropdownLinks li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navLinks {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .burgerIcon {
+    display: block;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: beige;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 2000;
+  }
+
+  .dropdownLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdownLinks li {
+    margin: 10px 0;
+    white-space: nowrap;
+  }
+
+  .dropdownLinks li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
