@@ -1,4 +1,3 @@
-// App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "../components/Header";
@@ -12,37 +11,20 @@ import Footer from "../components/Footer";
 import { CartProvider } from '../components/CartContext';
 
 const App = () => {
-  const [cartItems, setCartItems] = React.useState([]);
-
-  // const addToCart = (product) => {
-  //   setCartItems((prevItems) => {
-  //     const existingItem = prevItems.find((item) => item.name === product.name);
-  //     if (existingItem) {
-  //       return prevItems.map((item) =>
-  //         item.name === product.name
-  //           ? { ...item, quantity: item.quantity + product.quantity }
-  //           : item
-  //       );
-  //     } else {
-  //       return [...prevItems, product];
-  //     }
-  //   });
-  // };
-
   return (
     <CartProvider>
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ourstory" element={<OurStory />} />
-        <Route path="/ourservice" element={<OurService />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/shop" element={<Shop/>} />
-      </Routes>
-      <Footer></Footer>
-    </Router>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ourstory" element={<OurStory />} />
+          <Route path="/ourservice" element={<OurService />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/shop" element={<Shop />} />
+        </Routes>
+        <Footer />
+      </Router>
     </CartProvider>
   );
 };

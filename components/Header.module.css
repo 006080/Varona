@@ -48,6 +48,7 @@
 }
 
 .icons {
+  margin-right: 70px;
   display: flex;
   align-items: center;
   position: relative; /* Added to position the cart count correctly */
@@ -74,6 +75,18 @@
 @media (max-width: 768px) {
   .navLinks {
     display: none;
+  }
+
+  .logotype {
+    width: 100px;
+    margin-left: 0px;
+  }
+
+  .icons {
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    position: relative; /* Added to position the cart count correctly */
   }
 
   .navigation {
@@ -124,6 +137,18 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .navLinks {
     display: none;
+  }
+
+  .logotype {
+    width: 100px;
+    margin-left: 0px;
+  }
+
+  .icons {
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    position: relative; /* Added to position the cart count correctly */
   }
 
   .navigation {
