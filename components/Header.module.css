@@ -203,4 +203,18 @@
     position: relative; /* Added to position the cart count correctly */
   }
 
+  @media(min-width: 1367px) and (max-width: 1800px) {
+    .logotype {
+      width: 100px;
+      margin-left: 0px;
+    }
+  
+    .icons {
+      margin-right: 0px;
+      display: flex;
+      align-items: center;
+      position: relative; /* Added to position the cart count correctly */
+    }
+  }
+
 }
