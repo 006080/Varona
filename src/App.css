@@ -15,9 +15,13 @@ body {
   /* font-family: "Playfair Display", serif; */
   height: 100%; /* Ensures the HTML and body take the full viewport height */
   background-image: url("../src/assets/main.jpeg");
-  background-size: initial;
+  background-size: cover;
   /* background-position: top; */
-}
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
 
 .app-container {
   /* background-size: cover; */

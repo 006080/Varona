@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import styles from "./CartSummary.module.css";
-import { useCart } from './CartContext';
+import { useCart } from "./CartContext";
 
 const CartSummary = ({ onClose }) => {
   const { cartItems, removeFromCart } = useCart();
@@ -23,7 +23,7 @@ const CartSummary = ({ onClose }) => {
             <p>{item.name}</p>
             <p>Quantity: {item.quantity}</p>
             <p>Price: ${item.price}</p>
-            <button onClick={() => removeFromCart(item.name)}>Remove</button>
+            <button style={{backgroundColor:"black", marginBottom:"15px"}} onClick={() => removeFromCart(item.name)}>Remove</button>
           </div>
         ))}
       </div>

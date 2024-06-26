@@ -1,6 +1,9 @@
 .shop {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(255, 255, 255);
     margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items */
+    width: 100%; /* Full width */
+    padding: 1rem; /* Some padding for spacing */
+    box-sizing: border-box;
 }

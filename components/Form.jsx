@@ -90,7 +90,7 @@ const Form = () => {
             />
           </div>
           <div className={fullWidthStyles}>
-            <legend>Do you agree to the terms?</legend>
+            <legend style={{color:'grey', fontWeight:"200"}}>Do you agree to the terms?</legend>
             <div className={styles.radioGroup}>
               <label>
                 <input
@@ -114,11 +114,11 @@ const Form = () => {
               </label>
             </div>
           </div>
-          <div className={fullWidthStyles}>
+          <div >
             <button
               className={styles.button}
               type="submit"
-              disabled={formFields.terms === "no" || formFields.terms === ""}
+              // disabled={formFields.terms === "no" || formFields.terms === ""}
             >
               Submit
             </button>

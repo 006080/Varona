@@ -1,11 +1,11 @@
-
 .wrapper {
-  width: 500px;
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.181);
   border: 1px solid #cccccc82;
   border-radius: 10px;
   justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 100px;
 }
 
 h3 {
@@ -38,13 +38,15 @@ h3 {
 }
 
 label {
-  color: white;
+  color: rgba(222, 222, 222, 0.856);
   display: block;
   margin-bottom: 5px;
   text-align: left;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #cccccce5;
@@ -58,15 +60,11 @@ textarea {
 
 button {
   padding: 10px 40px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: black;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-button:disabled {
-  background-color: #aaa;
 }
 
 legend {
@@ -89,9 +87,7 @@ legend {
 }
 
 @media (max-width: 768px) {
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
 }

@@ -7,10 +7,11 @@ import scarf2 from "../src/assets/scarf2.jpg";
 import img1 from "../src/assets/collar.jpg";
 import mantel from "../src/assets/manto.jpg";
 import sweater from "../src/assets/sweater.jpg";
-import styles from "../components/Shop.module.css"
+import styles from "../components/Shop.module.css";
 
 const Shop = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
   const addToCart = (product) => {
     // Check if the product is already in cart
@@ -27,6 +28,12 @@ const Shop = () => {
       // Product does not exist in cart, add new product
       setCartItems([...cartItems, product]);
     }
+    // Show cart summary when an item is added
+    setCartIsOpen(true);
+  };
+
+  const handleCloseCart = () => {
+    setCartIsOpen(false);
   };
 
   return (
@@ -74,9 +81,11 @@ const Shop = () => {
         description="This exquisite scarf, crafted from 100% Italian Wool, boasts a luxurious feel and timeless appeal. The loosely spun wool creates a cosy texture, perfect for chilly days. Available in various shades."
       />
 
-      <div >
-        <CartSummary cartItems={cartItems} />
-      </div>
+      {cartIsOpen && (
+        <div>
+          <CartSummary cartItems={cartItems} onClose={handleCloseCart} />
+        </div>
+      )}
     </div>
   );
 };
