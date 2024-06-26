@@ -71,6 +71,12 @@
   margin-left: 40px;
 }
 
+.blackBackground {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
 /* Media query for responsive design */
 @media (max-width: 768px) {
   .navLinks {

@@ -1,4 +1,5 @@
 .wrapper {
+  width: 500px;
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.181);
   border: 1px solid #cccccc82;
@@ -88,7 +89,9 @@ legend {
 }
 
 @media (max-width: 768px) {
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
 }

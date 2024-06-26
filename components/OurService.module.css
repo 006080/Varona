@@ -1,10 +1,10 @@
 
 :root {
-    --color-style: #110a71dd;
+    --color-style: #0e094bdd;
     --color-mission: beige;
-    --color-materials: #064f37;
+    --color-materials: #00402b;
     --color-service: #000000;
-    --color-customers: #69056e;
+    --color-customers: #400b42;
 }
 
 .ordnung {
@@ -109,7 +109,38 @@ section img {
     line-height: 1.5;
 }
 
+.sectionCustomers >.textContainer>p{
+    color: beige;
+    line-height: 1.5;
+}
+
+.sectionContest >.textContainer>p{
+    color: beige;
+    line-height: 1.5;
+}
+
+.sectionMaterials >.textContainer>p{
+    color: beige;
+    line-height: 1.5;
+}
+
+.sectionStyle >.textContainer>p{
+    color: beige;
+    line-height: 1.5;
+}
+
 .sectionService >.textContainer>h1{
+    color: beige;
+}
+
+.sectionCustomers >.textContainer>h1{
+    color: rgba(245, 245, 220, 0.824);
+
+}.sectionMaterials >.textContainer>h1{
+    color: beige;
+}
+
+.sectionStyle >.textContainer>h1{
     color: beige;
 }
 

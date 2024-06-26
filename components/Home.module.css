@@ -19,7 +19,7 @@
   }
 
 h1 {
-  font-size: 60px;
+  font-size: 54px;
   font-family: "Playfair Display", serif;
   color: rgb(0, 0, 0);
   font-style: italic;
@@ -36,8 +36,8 @@ h2 {
 .sloganBlog {
   text-align: right;
   position: absolute;
-  top: 50vh; /* 2/3 of the viewport height */
-  right: 12vw; /* 1/3 of the viewport width */
+  top: 35vh; /* 2/3 of the viewport height */
+  right: 10vw; /* 1/3 of the viewport width */
 }
 
 .homeButton {

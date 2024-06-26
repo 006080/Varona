@@ -16,6 +16,8 @@ const Header = () => {
   const [menu, openMenu] = useState(false);
   const { cartItems } = useCart();
 
+  const isContactPage = location.pathname === "/contacts";
+
   const handleCartClick = () => {
     setCartIsOpen(!cartIsOpen);
   };
@@ -26,7 +28,7 @@ const Header = () => {
 
   return (
     <Nav>
-      <div className={styles.navigation}>
+    <div className={`${styles.navigation} ${isContactPage ? styles.blackBackground : ''}`}>
         <div onClick={()=> navigate("/")} className={styles.logo}>
           <img className={styles.logotype} onClick={() => navigate("/")} src={logo} alt="Shopping Cart" />
         </div>

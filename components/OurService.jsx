@@ -16,7 +16,7 @@ const OurService = () => {
       </section>
       <section className={styles.sectionStyle}>
         <div className={styles.textContainer}>
-          <h1>Our Style:</h1>
+          <h1>Our Mission:</h1>
           <p>
             Welcome to VARONA, where elegance meets poetry in the realm of Fashion.
             Inspired by the graceful allure of crows, our brand crafts
@@ -34,7 +34,7 @@ const OurService = () => {
       </section>
       <section className={styles.sectionMission}>
         <div className={styles.textContainer}>
-          <h1>Our Mission:</h1>
+          <h1>Our Style:</h1>
           <p>
             Our mission is more than just creating handmade knitwear. Recognizing
             the uniqueness of each client, our approach is far from
