@@ -193,11 +193,11 @@
 @media(min-width: 1025px) and (max-width: 1366px) {
   .logotype {
     width: 100px;
-    margin-left: 70px;
+    margin-left: 0px;
   }
 
   .icons {
-    margin-right: 70px;
+    margin-right: 0px;
     display: flex;
     align-items: center;
     position: relative; /* Added to position the cart count correctly */
