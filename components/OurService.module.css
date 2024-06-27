@@ -11,7 +11,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0;
 }
 
@@ -125,6 +126,16 @@ section img {
 }
 
 .sectionStyle >.textContainer>p{
+    color: beige;
+    line-height: 1.5;
+}
+
+.sectionService >.textContainer>p{
+    color: beige;
+    line-height: 1.5;
+}
+
+.sectionService >.textContainer>p{
     color: beige;
     line-height: 1.5;
 }

@@ -7,6 +7,8 @@ import mialejournal from "../src/assets/MIA-LE-JOURNAL-07.jpg";
 import woolen from "../src/assets/woolen.jpg";
 import bissiol from "../src/assets/bissiol.jpg";
 import mialogo from "../src/assets/LOGO-WEB-BIANCO.png";
+import revista from "../src/assets/revista.jpg";
+import undrogin from "../src/assets/undrogin.jpg";
 
 const OurService = () => {
   return (
@@ -94,7 +96,7 @@ const OurService = () => {
         </div>
       </section>
       <section>
-        <img className={styles.fullWidthImage} src={bissiol} alt="Bissiol" />
+        <img className={styles.fullWidthImage} src={revista} />
       </section>
       <section className={styles.sectionCustomers}>
         <div className={styles.textContainer}>
@@ -105,6 +107,24 @@ const OurService = () => {
             we're here to turn your boldest visions into reality.
           </p>
         </div>
+      </section>
+      <section>
+        <img className={styles.fullWidthImage} src={undrogin} />
+      </section>
+      
+      <section className={styles.sectionCustomers}>
+        <div className={styles.textContainer}>
+          <h1>Our Customers:</h1>
+          <p>
+            We specialize in creating exclusive, handmade items and accessories
+            tailored for both men and women. Using only premium natural materials,
+            we're here to turn your boldest visions into reality.
+          </p>
+        </div>
+      </section>
+      
+      <section>
+        <img className={styles.fullWidthImage} src={bissiol} alt="Bissiol" />
       </section>
     </div>
   );

@@ -3,7 +3,7 @@ import CardProduct from "../components/CardProduct";
 import CartSummary from "../components/CartSummary";
 import scarf from "../src/assets/scarf.jpg";
 import trousers from "../src/assets/trousers.jpg";
-import scarf2 from "../src/assets/scarf2.jpg";
+import top from "../src/assets/top.png";
 import img1 from "../src/assets/collar.jpg";
 import mantel from "../src/assets/manto.jpg";
 import sweater from "../src/assets/sweater.jpg";
@@ -73,10 +73,10 @@ const Shop = () => {
         price={320}
         description="Crafted from high-quality cashmere, this shawl ensures warmth and elegance. Whether draped over your shoulders during cool evenings or worn as a statement piece, this shawl complements any outfit."
       />
-      <CardProduct
+      <CardProduct className={styles.top}
         onClick={addToCart}
-        image={scarf2}
-        name="Woolen SCARF"
+        image={top}
+        name="Woolen TOP"
         price={220}
         description="This exquisite scarf, crafted from 100% Italian Wool, boasts a luxurious feel and timeless appeal. The loosely spun wool creates a cosy texture, perfect for chilly days. Available in various shades."
       />
