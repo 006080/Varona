@@ -161,6 +161,22 @@ const Form = () => {
             >
               Submit
             </button>
+            <div className={styles.textArea}>
+              <p style={{ fontStyle: "italic", fontFamily: "monospace" }}>
+                We will respond to every email within 24 hours, from Monday to Saturday.
+              </p>
+
+              <p style={{ fontStyle: "italic", fontFamily: "monospace" }}>
+                You can also call us at our toll-free number:{" "}
+                <a
+                  href="tel:+4917620652851"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  017620652851
+                </a>{" "}
+                - from 9AM to 9PM EST Monday to Friday, and 10AM to 9PM EST on Saturday.
+              </p>
+            </div>
           </div>
         </form>
       </div>
