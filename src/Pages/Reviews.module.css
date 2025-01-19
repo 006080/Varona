@@ -91,6 +91,7 @@
 }
 
 .reviewItem {
+  justify-content: space-between;
   height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
@@ -139,6 +140,7 @@ font-weight: 600;
 
   .reviewItem {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     margin: 20px;
     background-color: white;
@@ -170,7 +172,6 @@ font-weight: 600;
   }
 }
 
-/* Media Queries for Responsiveness */
 
 /* Medium devices (tablets) */
 @media (max-width: 1024px) {
@@ -211,6 +212,7 @@ font-weight: 600;
   }
 
   .reviewItem {
+    height: auto;
     margin: 20px;
     padding: 15px;
     border-radius: 6px;
