@@ -1,5 +1,5 @@
 .wrapper {
-    position: fixed;
+  position: fixed;
   width: 65%; /* 70% of the viewport width on all devices */
   padding: 40px;
   padding-right: 20px; /* Optional: add right padding if needed for better spacing */
@@ -49,6 +49,7 @@ h3 {
 
 .inputItem {
   flex: 1;
+  margin-bottom: 10px;
 }
 
 .fullWidth {
@@ -195,3 +196,4 @@ legend {
   align-items: flex-start;
 }
 }
+

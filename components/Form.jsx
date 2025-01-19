@@ -1,5 +1,6 @@
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import styles from "./Form.module.css";
-import { useState } from "react";
 import SubmitModal from "./SubmitModal";
 
 const Form = () => {
@@ -8,55 +9,57 @@ const Form = () => {
     surname: "",
     email: "",
     message: "",
-    terms: "no", // Initialize terms to "no" (valid value)
+    terms: "no",
   });
 
-  // State to handle modal visibility
+  const [status, setStatus] = useState("");
   const [openModal, setOpenModal] = useState(false);
+  const recaptchaRef = useRef();
 
   const fullWidthStyles = [styles.inputWrapper, styles.fullWidth].join(" ");
 
-  // Function to get the correct API endpoint based on environment
   const getApiUrl = () => {
-    if (process.env.NODE_ENV === 'production') {
-      return 'https://www.nataliyarodionova.com/api/submit'; // Production URL
+    if (import.meta.env.VITE_NODE_ENV === "production") {
+      return `${import.meta.env.VITE_API_BASE_URL_PROD}/api/feedback`;
     }
-    return 'http://localhost:4000/api/submit'; // Local development URL
+    return `${import.meta.env.VITE_API_BASE_URL_LOCAL}/api/feedback`;
   };
-
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = { ...formFields };
-
-    console.log('Submitting data:', data);
-
     try {
+      const captchaToken = await recaptchaRef.current.executeAsync();
+      recaptchaRef.current.reset(); 
+
+      const data = { ...formFields, captchaToken };
+
       const response = await fetch(getApiUrl(), {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
       if (response.ok) {
-        // Reset form fields, but keep terms as 'yes' or 'no' based on user input
         setFormFields({
           name: "",
           surname: "",
           email: "",
           message: "",
-          terms: "yes", // Keep the terms value as is
+          terms: "no",
         });
-
-        // Open the modal after successful form submission
-        setOpenModal(true);
+        setOpenModal(true); 
+        setStatus("Message sent successfully!");
       } else {
-        alert("There was an error submitting the form.");
+        try {
+          const errorData = await response.json();
+          setStatus(errorData.message || "There was an error sending the message.");
+        } catch (jsonError) {
+          setStatus("An unknown error occurred. Please try again.");
+        }
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("There was a network error.");
+      setStatus("Network error. Please try again later.");
     }
   };
 
@@ -67,7 +70,6 @@ const Form = () => {
     }));
   };
 
-  // Check if the form is valid (all fields must be filled, and terms must be accepted)
   const isFormValid =
     formFields.name &&
     formFields.surname &&
@@ -180,11 +182,15 @@ const Form = () => {
           </div>
         </form>
       </div>
-
-      {/* Conditionally render the SubmitModal and pass onClose function */}
+      <ReCAPTCHA
+          sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+          size="invisible"
+          ref={recaptchaRef}
+        />
       {openModal && <SubmitModal onClose={() => setOpenModal(false)} />}
     </>
   );
 };
 
 export default Form;
+
